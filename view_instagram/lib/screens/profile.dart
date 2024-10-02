@@ -147,21 +147,38 @@ class _ProfileState extends State<Profile> {
                 ],
               ),
             ),
-            const SingleChildScrollView(
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              // padding: EdgeInsets.symmetric(horizontal: 5),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Column(
-                    children: [
-                      CircleAvatar(
-                        radius: 32,
-                        // backgroundImage: NetworkImage('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.tenor.com%2Fimages%2F45c8e0c4db03c47eb41ae9cf452e9571%2Ftenor.gif&f=1&nofb=1&ipt=66466bebb0e028929cf063eece15276cadf1f10c3ef044ffde713e8701b8dc71&ipo=images'),
-                        backgroundColor: Colors.grey,
-                      ),
-                      Text('New'),
-                    ],
+                  Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 5),
+                    child: const Column(
+                      children: [
+                        CircleAvatar(
+                          radius: 32,
+                          // backgroundImage: NetworkImage('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.tenor.com%2Fimages%2F45c8e0c4db03c47eb41ae9cf452e9571%2Ftenor.gif&f=1&nofb=1&ipt=66466bebb0e028929cf063eece15276cadf1f10c3ef044ffde713e8701b8dc71&ipo=images'),
+                          backgroundColor: Colors.grey,
+                        ),
+                        Text('New'),
+                      ],
+                    ),
                   ),
-                  Column(
+                  Container(
+                    child: const Column(
+                      children: [
+                        CircleAvatar(
+                          radius: 32,
+                          // backgroundImage: NetworkImage('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.tenor.com%2Fimages%2F45c8e0c4db03c47eb41ae9cf452e9571%2Ftenor.gif&f=1&nofb=1&ipt=66466bebb0e028929cf063eece15276cadf1f10c3ef044ffde713e8701b8dc71&ipo=images'),
+                          backgroundColor: Colors.grey,
+                        ),
+                        Text(''),
+                      ],
+                    ),
+                  ),
+                  const Column(
                     children: [
                       CircleAvatar(
                         radius: 32,
@@ -171,7 +188,7 @@ class _ProfileState extends State<Profile> {
                       Text(''),
                     ],
                   ),
-                  Column(
+                  const Column(
                     children: [
                       CircleAvatar(
                         radius: 32,
@@ -181,7 +198,7 @@ class _ProfileState extends State<Profile> {
                       Text(''),
                     ],
                   ),
-                  Column(
+                  const Column(
                     children: [
                       CircleAvatar(
                         radius: 32,
@@ -191,7 +208,7 @@ class _ProfileState extends State<Profile> {
                       Text(''),
                     ],
                   ),
-                  Column(
+                  const Column(
                     children: [
                       CircleAvatar(
                         radius: 32,
@@ -200,7 +217,27 @@ class _ProfileState extends State<Profile> {
                       ),
                       Text(''),
                     ],
-                  )
+                  ),
+                  const Column(
+                    children: [
+                      CircleAvatar(
+                        radius: 32,
+                        // backgroundImage: NetworkImage('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.tenor.com%2Fimages%2F45c8e0c4db03c47eb41ae9cf452e9571%2Ftenor.gif&f=1&nofb=1&ipt=66466bebb0e028929cf063eece15276cadf1f10c3ef044ffde713e8701b8dc71&ipo=images'),
+                        backgroundColor: Colors.grey,
+                      ),
+                      Text(''),
+                    ],
+                  ),
+                  const Column(
+                    children: [
+                      CircleAvatar(
+                        radius: 32,
+                        // backgroundImage: NetworkImage('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.tenor.com%2Fimages%2F45c8e0c4db03c47eb41ae9cf452e9571%2Ftenor.gif&f=1&nofb=1&ipt=66466bebb0e028929cf063eece15276cadf1f10c3ef044ffde713e8701b8dc71&ipo=images'),
+                        backgroundColor: Colors.grey,
+                      ),
+                      Text(''),
+                    ],
+                  ),
                 ],
               ),
             ),
@@ -213,7 +250,7 @@ class _ProfileState extends State<Profile> {
             ),
             Container(
               padding: const EdgeInsets.all(1),
-              height: 300,  // Altura fija para el GridView
+              height: 300,
               child: GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 3,
@@ -221,10 +258,9 @@ class _ProfileState extends State<Profile> {
                   mainAxisSpacing: 2.0,
                   childAspectRatio: 1.0,
                 ),
-                itemCount: 10,  // Cantidad de elementos en el GridView
+                itemCount: 10,
                 itemBuilder: (context, index) {
                   return Container(
-                    // padding: const EdgeInsets.all(5),
                     color: Colors.grey,
                     child: const Text('')
                   );

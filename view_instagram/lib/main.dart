@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:view_instagram/screens/home_page.dart';
 import 'package:view_instagram/screens/profile.dart';
 import 'package:view_instagram/screens/search.dart';
 
@@ -15,7 +16,8 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Center(
-          child: Profile(),
+          child: MyHomePage(),
+          // child: Profile(),
           // child: Search(),
         ),
       ),
